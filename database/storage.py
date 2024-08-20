@@ -44,6 +44,12 @@ def update_task(user_id, task_index, completed=None, new_task=None):
 def toggle_reminder_setting(user_id):
     data = _load_data()
     user_data = data.setdefault(str(user_id), {"tasks": [], "daily_tasks": [], "reminder": False})
+    
+    # Ensure the 'reminder' key exists
+    if "reminder" not in user_data:
+        user_data["reminder"] = False
+
+    # Toggle the reminder setting
     user_data["reminder"] = not user_data["reminder"]
     _save_data(data)
     return user_data["reminder"]

@@ -1,7 +1,7 @@
 import schedule
 import time
 from threading import Thread
-from tasks.task_management import get_tasks, get_reminder_setting
+from database.storage import get_tasks, get_reminder_setting  # Correct import from database.storage
 from bot import bot
 
 def send_reminders():

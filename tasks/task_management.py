@@ -3,8 +3,7 @@ from database.storage import (
     save_task,
     remove_task,
     update_task,
-    toggle_reminder_setting,
-    get_reminder_setting,
+    toggle_reminder_setting
 )
 from bot import bot
 
