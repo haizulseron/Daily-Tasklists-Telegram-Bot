@@ -1,0 +1,7 @@
+# Example: Utility to check if input is a number
+def is_number(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
